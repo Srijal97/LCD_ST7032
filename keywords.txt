@@ -16,15 +16,15 @@ begin	KEYWORD2
 clear	KEYWORD2
 home	KEYWORD2
 display	KEYWORD2
-noDisplay	KEYWORD2
-setCursor	KEYWORD2
+no_display	KEYWORD2
+set_cursor	KEYWORD2
 cursor	KEYWORD2
-noCursor	KEYWORD2
+no_cursor	KEYWORD2
 blink	KEYWORD2
-noBlink	KEYWORD2
-setcontrast	KEYWORD2
-adjcontrast	KEYWORD2
-getcontrast	KEYWORD2
+no_blink	KEYWORD2
+set_contrast	KEYWORD2
+adjust_contrast	KEYWORD2
+get_contrast	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

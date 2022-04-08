@@ -1,12 +1,12 @@
 //-------------------------------------------------------------------------------------------
 // LCD_ST7032.h - Arduino i2c master library for LCD ST7032
-// Olav Kallhovd sept2017
+// Olav Kallhovd sept2017, Modified Srijal Poojari, April 2022
 //
-// Tested Module    : ERC1602-4, EASTRISING TECHNOLOGY CO,.LTD.
+// Tested Module    : ERC1602-4, EASTRISING TECHNOLOGY CO,.LTD. [Srijal: Midas MCCOG21605B6W-SPTLYI. Not all functions were tested]
 // Drive IC         : ST7032
 // INTERFACE        : I2C
 // VDD              : 2.7V-5.5V
-// Tested with MCU	: Arduino Uno, Attiny85@1mhz(5.0V), Attiny85@8mhz(5.0V) and ESP8266(3.3V)
+// Tested with MCU	: Arduino Uno, Attiny85@1mhz(5.0V), Attiny85@8mhz(5.0V) and ESP8266(3.3V) [Srijal: Seeeduino XIAO]
 //-------------------------------------------------------------------------------------------
 
 #ifndef LCD_ST7032_h
@@ -14,7 +14,7 @@
 
 #include <Arduino.h>
 
-#define Write_Address                 0x3E //i2c address
+#define write_address                 0x3E //i2c address
 #define CNTRBIT                       0x00 //followed by command bytes
 #define CNTRBIT_CO                    0x80 //followed by 1 command byte
 #define CNTRBIT_RS                    0x40 //after last control byte, followed by DDRAM data byte(s)
@@ -69,21 +69,21 @@ class LCD_ST7032: public Print
 		void clear();
 		void home();
 		void display();
-		void noDisplay();
-		void setCursor(uint8_t line, uint8_t pos);
+		void no_display();
+		void set_cursor(uint8_t line, uint8_t pos);
 		void cursor();
-		void noCursor();
+		void no_cursor();
 		void blink();
-		void noBlink();
-		void setcontrast(int val);
-		void adjcontrast(int val);
-		uint8_t getcontrast();
+		void no_blink();
+		void set_contrast(int val);
+		void adjust_contrast(int val);
+		uint8_t get_contrast();
 		virtual size_t write(uint8_t chr);
 	
 	protected:
-		void Write_Instruction(uint8_t cmd);
-		void Write_Data(uint8_t data);
-		uint8_t displayOnOffSetting = (DISPLAY_ON_OFF | DISPLAY_ON_OFF_D);
+		void write_instruction(uint8_t cmd);
+		void write_data(uint8_t data);
+		uint8_t display_on_off_setting = (DISPLAY_ON_OFF | DISPLAY_ON_OFF_D);
 		uint8_t contrast = 0x18;
 };	
 
