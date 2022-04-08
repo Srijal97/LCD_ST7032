@@ -8,9 +8,9 @@
 // Tested with MCU	: Arduino Uno, Attiny85@1mhz(5.0V), Attiny85@8mhz(5.0V) and ESP8266(3.3V) [Srijal: Seeeduino XIAO]
 //-------------------------------------------------------------------------------------------
 
-#include <LCD_ST7032.h>
+#include <DISPLAY_ST7032.h>
 
-LCD_ST7032 midas_lcd;
+DISPLAY_ST7032 midas_lcd;
 
 void setup() {
   midas_lcd.begin();
@@ -22,7 +22,7 @@ void loop() {
   
   // Write a piece of text on the first line...
   midas_lcd.set_cursor(0, 0);  //LINE 1, ADDRESS 0
-  midas_lcd.print("Hello World!");
+  midas_lcd.print("Hello World!!");
 
   // Write the counter on the second line...
   midas_lcd.set_cursor(1, 0);

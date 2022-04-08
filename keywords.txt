@@ -1,12 +1,12 @@
 #######################################
-# Syntax Coloring Map For LCD_ST7032
+# Syntax Coloring Map For DISPLAY_ST7032
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-LCD_ST7032	KEYWORD1
+DISPLAY_ST7032	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

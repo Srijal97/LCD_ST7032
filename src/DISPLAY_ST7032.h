@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// LCD_ST7032.h - Arduino i2c master library for LCD ST7032
+// DISPLAY_ST7032.h - Arduino i2c master library for LCD ST7032
 // Olav Kallhovd sept2017, Modified Srijal Poojari, April 2022
 //
 // Tested Module    : ERC1602-4, EASTRISING TECHNOLOGY CO,.LTD. [Srijal: Midas MCCOG21605B6W-SPTLYI. Not all functions were tested]
@@ -9,8 +9,8 @@
 // Tested with MCU	: Arduino Uno, Attiny85@1mhz(5.0V), Attiny85@8mhz(5.0V) and ESP8266(3.3V) [Srijal: Seeeduino XIAO]
 //-------------------------------------------------------------------------------------------
 
-#ifndef LCD_ST7032_h
-#define LCD_ST7032_h
+#ifndef DISPLAY_ST7032_h
+#define DISPLAY_ST7032_h
 
 #include <Arduino.h>
 
@@ -61,10 +61,10 @@
 #define WRITE_DELAY_MS                  30 //see data sheet
 #define HOME_CLEAR_DELAY_MS			  1200 //see data sheet
 
-class LCD_ST7032: public Print 
+class DISPLAY_ST7032: public Print 
 {
 	public:
-		LCD_ST7032(); 
+		DISPLAY_ST7032(); 
 		void begin();
 		void clear();
 		void home();
