@@ -8,9 +8,9 @@
 // Tested with MCU	: Arduino Uno, Attiny85@1mhz(5.0V), Attiny85@8mhz(5.0V) and ESP8266(3.3V) [Srijal: Seeeduino XIAO]
 //-------------------------------------------------------------------------------------------
 
-#include <LCD_ST7032.h>
+#include <DISPLAY_ST7032.h>
 
-LCD_ST7032 midas_lcd;
+DISPLAY_ST7032 midas_lcd;
 
 const byte contrastButtonPin = 3;
 boolean lastButtonState = 1;
